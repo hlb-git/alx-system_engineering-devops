@@ -2,6 +2,7 @@
 #if statement implementation
 
 count=1
+echo "Hour: 0"
 while [ $count -le 12 ]
 do
 	min_cnt=1
