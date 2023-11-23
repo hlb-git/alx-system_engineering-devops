@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#if statement implementation
+
+count=1
+while [ $count -le 12 ]
+do
+	min_cnt=1
+	while [ $min_cnt -le 59 ]
+	do
+		echo "$min_cnt"
+		((min_cnt++))
+	done
+	echo "Hour: $count"
+	((count++))
+done
