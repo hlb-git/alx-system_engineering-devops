@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#if statement implementation
+
+count=0
+while [ $count -lt 11 ]
+do
+	if [ $count -eq 9 ]; then
+		echo 'Hi'
+	else
+		echo 'Best School'
+	fi
+	((count++))
+done
