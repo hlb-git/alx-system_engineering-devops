@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#display content of the pwd in list format
+
+for file in $(ls)
+do 
+	echo "$file"
+done
