@@ -1,0 +1,6 @@
+#!/bin/env bash
+#my first shell script
+for _ in {1..10}:
+do 
+	echo 'Best School'
+done
