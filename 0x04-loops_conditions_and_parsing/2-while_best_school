@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#implementation of while loop
+
+count=10
+while [ $count -gt 0 ]
+do
+	echo 'Best School'
+	((count--))
+done
