@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#bash script traping signals
+
+#!/usr/bin/env bash
+# a lot of extra traps
+filename=/var/run/myscript.pid
+function Quit {
+    sudo rm $filename
+    exit
+}
+function Terminate {
+    echo 'I hate the kill command'
+    sudo rm $filename
+    exit
+}
+trap Terminate SIGTERM
+trap Quit SIGQUIT
+trap "echo 'Y U no love me?!'" SIGINT
+sudo bash -c "echo $$ > $filename"
+while ((1))
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
