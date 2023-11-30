@@ -5,7 +5,7 @@ facename="facebook.com"
 faceip="8.8.8.8"
 
 
-if [ $(id -u) -eq 0 ]
+if [ "$(id -u)" -eq 0 ]
 then
 	cp /etc/hosts ~/hosts.new
 	sed -i s/127\.0\.0\.1/127\.0\.0\.2/ ~/hosts.new
