@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#pinging ip address
+if [ "$#" -eq 0 ]
+then
+	exit 1
+fi
+
+ping -c 5 "$1"
