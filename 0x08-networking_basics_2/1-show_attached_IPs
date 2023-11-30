@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#all ipv4 addresses on the machine
+
+ip a | grep 'inet' | grep -Po '(?<=inet )[\.\d]*'
