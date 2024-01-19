@@ -1,3 +1,4 @@
+#manifest file to create file
 file {'/tmp/shcool':
   ensure  => 'file',
   mode    => '0744',
