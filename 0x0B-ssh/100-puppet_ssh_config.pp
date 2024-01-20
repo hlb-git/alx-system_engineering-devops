@@ -1,4 +1,4 @@
-file {'~/.ssh/config':
+file {'/home/ubuntu/ssh/config':
   ensure  => 'file',
   owner   => 'ubuntu',
   group   => 'ubuntu',
