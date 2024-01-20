@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#logs into a remote server with ssh rsa method
+ssh -i ~/.ssh/school ubuntu@18.207.139.215
