@@ -3,6 +3,6 @@
 
 sudo apt-get -y update
 sudo apt-get -y install  nginx
-file=/usr/share/nginx/html/index.html
-sudo bash -c "echo Hello World > $file"
+file1=/usr/share/nginx/html/index.html
+sudo bash -c "echo Hello World > $file1"
 service nginx start
