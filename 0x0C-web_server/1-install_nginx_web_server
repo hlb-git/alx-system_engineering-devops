@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # install and configure nginx web server
 
-sudo apt -y update
-sudo apt -y install  nginx
+sudo apt-get -y update
+sudo apt-get -y install  nginx
 file=/usr/share/nginx/html/index.html
-sudo bash -c "echo 'Hello World' > $file"
-sudo service nginx start
+sudo bash -c "echo Hello World > $file"
+service nginx start
