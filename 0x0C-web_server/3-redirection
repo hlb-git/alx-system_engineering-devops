@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# redirect a page pamanetly
+
+sudo apt-get -y update
+sudo apt-get -y install  nginx
+file=/usr/share/nginx/html/index.html
+sudo bash -c "echo 'Hello World!' > $file"
+sudo sed -i 's/listen 80 default_server;/listen 80;/g' \
+	/etc/nginx/sites-available/default
+sudo sed -i 's@/var/www/html;@/usr/share/nginx/html;@' \
+	/etc/nginx/sites-available/default
+service nginx start
+sudo sed -i '/server_name _;/a \
+\
+    location \/redirect_me \{ \
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; \
+    \}' /etc/nginx/sites-available/default
+service nginx restart
