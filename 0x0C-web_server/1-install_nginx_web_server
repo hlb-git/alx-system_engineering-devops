@@ -7,4 +7,7 @@ file=/usr/share/nginx/html/index.html
 sudo bash -c "echo Hello World > $file"
 sudo sed -i 's/listen 80 default_server;/listen 80;/g' \
 	/etc/nginx/sites-available/default
+sudo sed -i 's@/var/www/html;@/usr/share/nginx/html;@' \
+	/etc/nginx/sites-available/default
 service nginx start
+service nginx restart
