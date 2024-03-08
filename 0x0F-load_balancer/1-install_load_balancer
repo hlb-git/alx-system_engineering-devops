@@ -9,7 +9,7 @@ frontend myfrontend
 	mode http
 	default_backend mybackend
 backend mybackend
-	sever 482147-web-01 18.207.139.215:80 check
-	sever 482147-web-02 18.204.3.2:80 check"
+	server 482147-web-01 18.207.139.215:80 check
+	server 482147-web-02 18.204.3.2:80 check"
 echo "$config" | sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null
 sudo service haproxy restart
